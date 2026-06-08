@@ -24,114 +24,102 @@ This project demonstrates the fundamental concepts used in modern high-performan
 
 
 ## Implemented Components
-Reorder Buffer (ROB)
+**Reorder Buffer (ROB)**
 
 Maintains program order and guarantees precise architectural state by retiring instructions in order.
 
-Features:
+*Features:*
 
-In-order commit
-Dependency tracking
-Speculative state management
-Branch recovery support
-Register Renaming
+        In-order commit
+        Dependency tracking
+        Speculative state management
+        Branch recovery support
+        Register Renaming
 
 Eliminates false dependencies through a Register Alias Table (RAT).
 
-Benefits:
+*Benefits:*
 
-Removes WAR hazards
-Removes WAW hazards
-Improves instruction-level parallelism
-Reservation Stations
+        Removes WAR hazards
+        Removes WAW hazards
+        Improves instruction-level parallelism
+        Reservation Stations
 
-Hold instructions waiting for operands.
+**Hold instructions waiting for operands.**
 
-Capabilities:
+*Capabilities:*
 
-Dynamic scheduling
-Operand wakeup
-Dependency resolution
-Out-of-order execution
-Load Store Queue (LSQ)
+        Dynamic scheduling
+        Operand wakeup
+        Dependency resolution
+        Out-of-order execution
+        Load Store Queue (LSQ)
 
-Tracks memory operations and models memory disambiguation.
+**Tracks memory operations and models memory disambiguation.**
 
-Features:
+*Features:*
 
-Load/store ordering
-Address tracking
-Store-to-load forwarding support
-Branch Prediction
+        Load/store ordering
+        Address tracking
+        Store-to-load forwarding support
+        Branch Prediction
 
-Implements a Gshare branch predictor.
+**Implements a Gshare branch predictor.**
 
-Features:
+*Features:*
 
-Global history register
-Pattern history table
-2-bit saturating counters
-Misprediction tracking
-Cache Hierarchy
+        Global history register
+        Pattern history table
+        2-bit saturating counters
+        Misprediction tracking
+        Cache Hierarchy
 
-Models a two-level cache subsystem.
+**Models a two-level cache subsystem.**
+        
+        L1 Cache
+        Parameter	Value
+        Size	32 KB
+        Associativity	8-way
+        Block Size	64 B
+        Latency	2 cycles
+        L2 Cache
+        Parameter	Value
+        Size	256 KB
+        Associativity	16-way
+        Block Size	64 B
+        Latency	12 cycles
+        Main Memory
+        Parameter	Value
+        Latency	40 cycles
+        Performance Metrics
 
-L1 Cache
-Parameter	Value
-Size	32 KB
-Associativity	8-way
-Block Size	64 B
-Latency	2 cycles
-L2 Cache
-Parameter	Value
-Size	256 KB
-Associativity	16-way
-Block Size	64 B
-Latency	12 cycles
-Main Memory
-Parameter	Value
-Latency	40 cycles
-Performance Metrics
+**The simulator reports:**
 
-The simulator reports:
-
-Total cycles
-Instructions retired
-Instructions per cycle (IPC)
-Branch prediction accuracy
-ROB stalls
-Reservation Station stalls
-LSQ stalls
-Cache hits and misses
-Dynamic energy estimation
-
-
-This simulator demonstrates:
-
-Instruction-Level Parallelism (ILP)
-Tomasulo Scheduling
-Register Renaming
-Dynamic Scheduling
-Out-of-Order Execution
-Speculative Execution
-Branch Prediction
-Memory Hierarchy Design
-Cache Modeling
-Pipeline Recovery Mechanisms
-Future Improvements
+        Total cycles
+        Instructions retired
+        Instructions per cycle (IPC)
+        Branch prediction accuracy
+        ROB stalls
+        Reservation Station stalls
+        LSQ stalls
+        Cache hits and misses
+        Dynamic energy estimation
 
 
-Recommended topics for understanding the simulator:
 
-Tomasulo's Algorithm
-Reorder Buffers
-Register Renaming
-Branch Prediction
-Cache Architecture
-Superscalar Processors
-Out-of-Order Execution
-Computer Architecture
-License
+
+
+## Recommended topics for understanding the simulator:
+
+        Tomasulo's Algorithm
+        Reorder Buffers
+        Register Renaming
+        Branch Prediction
+        Cache Architecture
+        Superscalar Processors
+        Out-of-Order Execution
+        Computer Architecture
+
 
 This project is released under the MIT License.
 
