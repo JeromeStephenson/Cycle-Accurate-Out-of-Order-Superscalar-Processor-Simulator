@@ -23,7 +23,7 @@ This project demonstrates the fundamental concepts used in modern high-performan
 
 
 
-Implemented Components
+## Implemented Components
 Reorder Buffer (ROB)
 
 Maintains program order and guarantees precise architectural state by retiring instructions in order.
