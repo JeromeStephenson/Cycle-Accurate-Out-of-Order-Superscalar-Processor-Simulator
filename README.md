@@ -7,17 +7,17 @@ Cycle-Accurate Superscalar Out-of-Order Processor Simulator
 A C++ cycle-accurate simulator that models the behavior of a modern superscalar out-of-order processor. The simulator implements key microarchitectural structures including Register Renaming, Reservation Stations, Reorder Buffer (ROB), Load-Store Queue (LSQ), Gshare Branch Prediction, and a multi-level cache hierarchy. It supports out-of-order execution with in-order retirement, branch speculation and recovery, memory dependency handling, and detailed cycle-by-cycle performance tracing.
 
 # Features
-4-wide superscalar dispatch architecture
-Register Alias Table (RAT) based register renaming
-Tomasulo-style dynamic scheduling using Reservation Stations
-Reorder Buffer (ROB) for precise exceptions and in-order commit
-Load-Store Queue (LSQ) with memory forwarding support
-Gshare branch predictor with speculative execution
-Two-level cache hierarchy (L1/L2) with configurable latencies
-Cycle-accurate execution modeling
-Performance statistics including IPC, cache behavior, branch prediction accuracy, and structural hazards
-Detailed execution logs for microarchitectural analysis
-Learning Objectives
+        4-wide superscalar dispatch architecture
+        Register Alias Table (RAT) based register renaming
+        Tomasulo-style dynamic scheduling using Reservation Stations
+        Reorder Buffer (ROB) for precise exceptions and in-order commit
+        Load-Store Queue (LSQ) with memory forwarding support
+        Gshare branch predictor with speculative execution
+        Two-level cache hierarchy (L1/L2) with configurable latencies
+        Cycle-accurate execution modeling
+        Performance statistics including IPC, cache behavior, branch prediction accuracy, and structural hazards
+        Detailed execution logs for microarchitectural analysis
+        Learning Objectives
 
 This project demonstrates the fundamental concepts used in modern high-performance processors such as dynamic instruction scheduling, speculative execution, memory hierarchy modeling, and instruction-level parallelism (ILP).
 
