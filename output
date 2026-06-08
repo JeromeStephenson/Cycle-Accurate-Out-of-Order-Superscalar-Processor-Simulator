@@ -1,1 +1,49 @@
+======================================================================
+                INITIATING CYCLE-ACCURATE OOO CORE MATRIX              
+======================================================================
+[Cycle    1] [  DISPATCH] Dispatched instruction ADD to ROB Tag [0], RS Index [0]
+[Cycle    1] [  DISPATCH] Dispatched instruction MUL to ROB Tag [1], RS Index [1]
+[Cycle    1] [  DISPATCH] Dispatched instruction STORE to ROB Tag [2], RS Index [2]
+[Cycle    1] [  DISPATCH] Dispatched instruction LOAD to ROB Tag [3], RS Index [3]
+[Cycle    1] [   EXECUTE] Fired Execution Unit for ROB ID [0]. Expected delay: 1
+[Cycle    1] [   EXECUTE] Fired Execution Unit for ROB ID [3]. Expected delay: 54
+[Cycle    2] [ WRITEBACK] ROB ID [0] completed execution. Broadcasting result: 10
+[Cycle    2] [  DISPATCH] Dispatched instruction SUB to ROB Tag [4], RS Index [0]
+[Cycle    2] [  DISPATCH] Dispatched instruction BRANCH to ROB Tag [5], RS Index [4]
+[Cycle    2] [  DISPATCH] Dispatched instruction ADD to ROB Tag [6], RS Index [5]
+[Cycle    2] [   EXECUTE] Fired Execution Unit for ROB ID [1]. Expected delay: 3
+[Cycle    2] [   EXECUTE] Fired Execution Unit for ROB ID [6]. Expected delay: 1
+[Cycle    3] [    COMMIT] Instruction UID [1] PC [0x1004] retired successfully.
+[Cycle    3] [ WRITEBACK] ROB ID [6] completed execution. Broadcasting result: 15
+[Cycle    5] [ WRITEBACK] ROB ID [1] completed execution. Broadcasting result: 50
+[Cycle    5] [   EXECUTE] Fired Execution Unit for ROB ID [2]. Expected delay: 14
+[Cycle    6] [    COMMIT] Instruction UID [2] PC [0x1008] retired successfully.
+[Cycle   19] [ WRITEBACK] ROB ID [2] completed execution. Broadcasting result: 50
+[Cycle   20] [    COMMIT] Instruction UID [3] PC [0x100c] retired successfully.
+[Cycle   55] [ WRITEBACK] ROB ID [3] completed execution. Broadcasting result: 99
+[Cycle   55] [   EXECUTE] Fired Execution Unit for ROB ID [4]. Expected delay: 1
+[Cycle   56] [    COMMIT] Instruction UID [4] PC [0x1010] retired successfully.
+[Cycle   56] [ WRITEBACK] ROB ID [4] completed execution. Broadcasting result: 94
+[Cycle   56] [   EXECUTE] Fired Execution Unit for ROB ID [5]. Expected delay: 1
+[Cycle   57] [    COMMIT] Instruction UID [5] PC [0x1014] retired successfully.
+[Cycle   57] [ WRITEBACK] ROB ID [5] completed execution. Broadcasting result: 0
+[Cycle   58] [  RECOVERY] Flushing pipeline structures due to mispredicted branch path...
 
+======================================================================
+                  CYCLE-ACCURATE CORE PERFORMANCE REPORT             
+======================================================================
+ Total Clock Runtime Cycles     : 58 cycles
+ Instructions Committed Successfully: 5
+ Achieved Instructions-Per-Cycle: 0.0862 IPC
+ Gshare Branch Predictions Hit  : 0
+ Gshare Branch Prediction Misses: 1
+ Structural ROB Stall Conditions: 0 cycles
+ Structural RS Stall Conditions : 0 cycles
+ Structural LSQ Stall Conditions: 0 cycles
+ Total Dynamic Energy Consumed  : 74.1 pJ
+----------------------------------------------------------------------
+ L1 Cache Reads  :      1 | L1 Cache Hits  : 0
+ L1 Cache Writes :      1 | L1 Cache Misses: 1
+ L2 Cache Reads  :      1 | L2 Cache Hits  : 0
+ L2 Cache Writes :      1 | L2 Cache Misses: 1
+======================================================================
